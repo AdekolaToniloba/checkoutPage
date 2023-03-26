@@ -14,22 +14,111 @@
   <body>
 
     <div class="container">
-      <h1>Checkout</h1>
-      <div class="main">
+     
         <!-- Left Side -->
         <div class="left">
+          <h1>Checkout</h1>
           <h3>Contact Information</h3>
 
+          <form action="" class="form-control">
+            <div class="form-group">
+            <label for="" class="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email...">
+          </div>
+
+          <div class="form-group">
+            <label for="" class="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your phone...">
+          </div>
+
+          <h3 class="ship-title">Shipping address</h3>
+          <div class="form-group">
+            <label for="" class="fullName"><Address></Address></label>
+            <input type="text" name="name" id="fullName" placeholder="Enter your full name...">
+          </div>
+
+          <div class="form-group">
+            <label for="" class="address">Address</label>
+            <input type="text" name="address" id="address" placeholder="Your address...">
+          </div>
+
+          <div class="form-group">
+            <label for="" class="city">City</label>
+            <input type="text" name="city" id="city" placeholder="Your city...">
+          </div>
+
+          <div class="form-group half">
+            <label for="" class="country">Country</label>
+            <select name="country" id="country" class="country"></select>
+          </div>
           
+          <div class="form-group half">
+            <label for="" class="postal">Postal Code</label>
+            <input type="text" name="postalCode" id="postal" placeholder="Your postal code...">
+          </div>
+
+          <div class="form-group">
+            <input type="checkbox" name="checkbox" id="saveInfo">
+            <label for="" class="checkbox">Save this information for next time.</label>
+          </div>
+
+          <input type="submit" value="Continue">
+
+          </form>
         </div>
 
         <!-- Rght Side -->
         <div class="right">
+          <div class="card">
 
+            <div class="item-1">
+              <div class="set">
+              <img src="./images/photo1.png" alt="item-1">
+                </div>
+                <div class="set-side">
+                  <h4>Vintage Backbag</h4>
+                  <div class="prices">
+                  <p class="orange">$54.99</p>
+                  <p class="line">$94.99</p>
+                </div>
+                <div class="input-step">
+                  <input type="number" name="" id="">
+                </div>
+                </div>
+                
+            </div>
+            <!-- </div> -->
+
+            <div class="item-2">
+              <div class="set">
+              <img src="./images/photo2.png" alt="item-2">
+              </div>
+                
+                <div class="set-side">
+                  <h4>Levi Shoes</h4>
+                  <div class="prices">
+                  <p class="orange">$74.99</p>
+                  <p class="line">$124.99</p>
+                </div>
+                <div class="input-step">
+                  <input type="number" name="" id="">
+                </div>
+                </div>
+                
+            </div>
+
+
+            </div>
+          </div>
         </div>
-      </div>  
+        </div>  
     
+
+       
     </div>
-    
+
+    <footer>
+      <p>created by <a href="https://github.com/adekolatoniloba">@AdekolaToniloba</a>-DevChallenges.io</p>
+    </footer>
   </body>
 </html>
