@@ -6,6 +6,8 @@
     --card-bg: #F2F2F2;
 }
 
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 
 
 /*=============== LAYOUT ==================*/
@@ -28,36 +30,96 @@ html {
 body {
     width: 100vw;
     height: 100vh;
-    font-family: poppins, sans-serif;
-    font-size: 0.88rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
     user-select: none;
     overflow-x: hidden;
-    color: var(--color-primary);
+    /* color: var(--color-primary); */
 }
 
 .container {
-    width: 60%;
+    width: 70%;
     margin: 2rem auto; 
     display: flex;
     justify-content: space-between;
 }
 
+.left {
+    margin-right: 100px;
+}
+
 h1 {
     margin-bottom: 3rem;
+    color: #4E5150;
+    ;
 }
 
 h3 {
     margin-bottom: 1.5rem;
+    color: #333333;
+}
+
+label {
+    font-size: 12px;
+    color: #4F4F4F;
 }
 
 input[type=text], [type=email], [type=tel], select {
     width: 100%;
-    padding: 5px 8px;
+    padding:  8px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    height: 46px;
+    box-sizing: border-box;
+  transition: 0.3s;
+  }
+  select {
+    appearance: none;
+    border: none;
+    font-size: 18px;
+    color: #828282;
+    /* background-color: #eee; */
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+  }
+
+  .form-group [type=text], [type=email], [type=tel], select {
+    padding-left: 40px;
+  }
+
+  .form-group {
+    position: relative;
+  }
+   
+  .form-group i {
+    position: absolute;
+    left: 0;
+    top: 34px;
+    padding: 9px 8px;
+    color: #aaa;
+    transition: 0.3s;
+  }
+
+  .form-group.success input {
+    border-color: #09c372;
+  }
+
+  .form-group.error input {
+    border-color: #ff3860;
+  }
+
+  .form-group .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+  }
+
+  .form-group input:focus {
+    outline: 0;
   }
 
   .ship-title {
@@ -66,6 +128,14 @@ input[type=text], [type=email], [type=tel], select {
 
   .half{
     width: 45%;
+  }
+  .side-side {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .country {
+    margin-right: 5px;
   }
 
 
@@ -80,27 +150,120 @@ input[type=text], [type=email], [type=tel], select {
     float: right;
     cursor: pointer;
   }
+  .fa-solid {
+    color: #828282;
+}
+
+  .checkbox {
+    font-size: 12px;
+    color: #4F4F4F;
+  }
+
+
 
 .card {
-    background: #F2F2F2;
+background:  var(--card-bg);
 border-radius: 12px;
-padding: 1rem;
+padding: 30px;
 margin: 2rem auto; 
 }
-img{
+
+ img{
     width: 175px;
-    height: 135px;
-    border-radius: 12px;
+    height: 175px;
+    border-radius: 12%;
     padding: 10px;
 }
 
 .item-1 {
     display: flex;
+   
 }
 
 .item-2 {
     display: flex;
+    margin-bottom: 90px;
 }
+
+.set-side {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+    color: #4E5150;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.prices {
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.orange {
+    color: #F2994A;
+    font-size: 16px;
+}
+
+.line {
+    font-size: 12px;
+    color: #4E5150;
+}
+
+#count-number {
+  /* margin-top: 1.5rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid #828282;
+    color: #A9A9A9;
+    border-radius: 12px;
+    padding: 1rem 0;
+    margin: 0;
+    width: 150px;
+    /* height: 52px; */
+   
+}
+
+#min, #plus, #mins, #pluss {
+  font-size: 20px;
+  color: #828282;
+  text-align: center;
+  background: #E0E0E0;
+  border-radius: 4px;
+  border: none;
+  width: 24.23px;
+    height: 26.24px;
+    font-family: 'Montserrat';
+}
+
+
+
+.shipping {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border-top: solid 1px #BDBDBD;
+    color: #333333;
+    font-size: 18px;
+    padding: 10px;
+
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border-top: solid 1px #BDBDBD;
+    color: #333333;
+    font-size: 18px;
+    padding: 10px;
+}
+
 
 
 
@@ -126,4 +289,33 @@ footer a {
 
 footer a:hover {
     border-bottom: 2px solid #A9A9A9;
+}
+
+
+/* Responsiveness */
+@media screen and (min-width:376px) and (max-width:767px){
+  body {
+    width: 100%;
+    height: auto;
+    /* display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+        align-items: center;
+        /* position: relative; */
+  }
+
+  .left {
+    margin: auto;
+    position: relative;
+  }
+
+
+ 
 }

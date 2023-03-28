@@ -7,6 +7,9 @@
       content="width=device-width, initial-scale=1,
   maximum-scale=5"
     />
+<!-- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="stylesheet" href="./css/style.css">
     <title>Checkout Page</title>
@@ -17,45 +20,68 @@
      
         <!-- Left Side -->
         <div class="left">
+          <!-- <div class="position"> -->
           <h1>Checkout</h1>
+        <!-- </div> -->
           <h3>Contact Information</h3>
 
-          <form action="" class="form-control">
+          <form action="" class="form-control" id="form">
             <div class="form-group">
             <label for="" class="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Enter your email...">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <div class="error"></div>
           </div>
 
           <div class="form-group">
             <label for="" class="phone">Phone</label>
             <input type="tel" name="phone" id="phone" placeholder="Enter your phone...">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <div class="error"></div>
           </div>
 
           <h3 class="ship-title">Shipping address</h3>
           <div class="form-group">
-            <label for="" class="fullName"><Address></Address></label>
+            <label for="" class="fullName">Full name</label>
             <input type="text" name="name" id="fullName" placeholder="Enter your full name...">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <div class="error"></div>
           </div>
 
           <div class="form-group">
             <label for="" class="address">Address</label>
             <input type="text" name="address" id="address" placeholder="Your address...">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <div class="error"></div>
           </div>
 
           <div class="form-group">
             <label for="" class="city">City</label>
             <input type="text" name="city" id="city" placeholder="Your city...">
+            <i class="fa-solid fa-city" aria-hidden="true"></i>
+            <div class="error"></div>
           </div>
 
+          <div class="side-side">
           <div class="form-group half">
             <label for="" class="country">Country</label>
-            <select name="country" id="country" class="country"></select>
+            <select name="country" id="country" class="country">
+              <option>Togo</option>
+              <option>Cameroon</option>
+              <option>Ghana</option>
+              <option selected>Nigeria</option>
+            </select>
+            <i class="fa-solid fa-earth-africa" aria-hidden="true"></i>
+            <div class="error"></div>
           </div>
-          
+        
           <div class="form-group half">
             <label for="" class="postal">Postal Code</label>
             <input type="text" name="postalCode" id="postal" placeholder="Your postal code...">
+            <i class="fa-solid fa-envelopes-bulk" aria-hidden="true"></i>
+            <div class="error"></div>
           </div>
+        </div>
 
           <div class="form-group">
             <input type="checkbox" name="checkbox" id="saveInfo">
@@ -79,11 +105,14 @@
                   <h4>Vintage Backbag</h4>
                   <div class="prices">
                   <p class="orange">$54.99</p>
-                  <p class="line">$94.99</p>
+                  <p class="line"><s>$94.99</s></p>
                 </div>
-                <div class="input-step">
-                  <input type="number" name="" id="">
-                </div>
+
+                <div id="count-number">
+                  <div id="min">-</div>
+                  <p id="count">0</p>
+                  <div id="plus">+</div>
+              </div>
                 </div>
                 
             </div>
@@ -98,17 +127,29 @@
                   <h4>Levi Shoes</h4>
                   <div class="prices">
                   <p class="orange">$74.99</p>
-                  <p class="line">$124.99</p>
+                  <p class="line"><s>$124.99</s></p>
                 </div>
-                <div class="input-step">
-                  <input type="number" name="" id="">
-                </div>
+                
+                <div id="count-number">
+                  <div id="mins">-</div>
+                  <p id="counts">0</p>
+                  <div id="pluss">+</div>
+              </div>
                 </div>
                 
             </div>
+            <div class="shipping">
+              <p>Shipping</p>
+              <p>$19</p>
+            </div>
 
+            <div class="total">
+              <p>Total</p>
+              <p>$148.98</p>
+            </div>
 
             </div>
+            
           </div>
         </div>
         </div>  
@@ -120,5 +161,6 @@
     <footer>
       <p>created by <a href="https://github.com/adekolatoniloba">@AdekolaToniloba</a>-DevChallenges.io</p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
